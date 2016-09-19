@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			Inventory
+		</title>
+	</head>
+	<body id="inventory" style="background-color: #000000; color: #FFFFFF">
+		Loading...
+	</body>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var id = ""
+		$.ajax( {
+			url: "/tu/data/" + id,
+		} ).done( function( data ){
+			if ( data.error ){
+				console.log( data.error );
+				$( "#inventory" ).html( data.error );
+				return;
+			}
+			var items = data.items;
+			var units = data.units;
+			var value = data.itemValue;
+			var html = "<h1>Units: " + units + " Units</h1>"
+			html += "<h1>Total Item Value: " + data.itemValue + " Units</h1><table><tr>";
+			var entry = 0;
+
+			for ( var i in items ){
+				if ( entry % 5 == 0 ){
+					html += "</tr><tr>"
+				}
+				var item = items[ i ];
+				console.log( items[ i ] );
+				html += "<td>"
+				html += "<p style=\"color: #" + item.name_color + "\">";
+				html += item.name;
+				html += "<img src=\"http://steamcommunity-a.akamaihd.net/economy/image/" + item.icon_url + "/64x64\"/>";
+				html += "</td>";
+
+				entry++;
+			}
+
+			$( "#inventory" ).html( html );
+		} )
+	</script>
+</html>

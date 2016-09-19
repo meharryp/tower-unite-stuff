@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>A TU Invetory Calculator (Formaly Plaza Stats)</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+		$( document ).ready( function(){
+			$( "#SearchForm" ).submit( function(){
+				console.log( "aids" );
+				window.open( "/tu/profile/" + $( "#LoadProfile" ).val() );
+			} );
+		} );
+	</script>
+	</head>
+	<body>
+		<div align="center">
+			<h2>This is a TU inventory viewing website</h2><br>
+			This was formally known as Plaza Stats until we were told that Pixeltail were going to be making a similar site.<br>
+			This is a heavy alpha version, with very simple layouts. Be warned that not everything works.<br><br>
+			Enter a SteamID64 or a vanity URL to search. The user must have a public profile.<br>
+			<form id="SearchForm">
+				<input type="search" id="LoadProfile">
+				<input type="submit" id="SubmitSearch" value="Show Profile">
+			</form>
+			<br>
+			<br>
+			<br>
+			If anyone wishes to help continue this, feel free to PM me, although keep in mind Pixeltail will proberbly obsolete this at some point.
+		</div>
+	</body>
+</html>

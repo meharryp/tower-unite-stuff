@@ -1,0 +1,30 @@
+Success: Did the query complete correctly?
+
+rgInventory: ???
+	rgInventory[ n ]: ???
+	rgInventory[ n ].id: Unique item ID
+	rgInventory[ n ].classid: Item class identifier
+	rgInventory[ n ].instanceid: ???
+	rgInventory[ n ].amount: How many there are (only occurs on stacks, which are deceprecated(?))
+	rgInventory[ n ].pos: Position in inventory
+
+rgCurrency: ???
+
+rgDescriptions[ key ]: Key is classid followed by _0 (Don't know why, could be for stacks? rgDescriptions is item info on all items in the inventory. However, if a user has 2 of one item there will only be one rgDescription, so don't use this to get all items, only for info.
+	rgDescriptions[ key ].appid: AppID of the game this is from (will always be 394690)
+	rgDescriptions[ key ].classid: Item class identifier
+	rgDescriptions[ key ].instanceid: ???
+	rgDescriptions[ key ].icon_url: Icon url relavite to http://steamcommunity-a.akamaihd.net/economy/image/, size can be adjusted by appending /(Width)x(Height)
+	rgDescriptions[ key ].icon_drag_url: ???
+	rgDescriptions[ key ].name: Item name
+	rgDescriptions[ key ].market_hash_name: ???
+	rgDescriptions[ key ].market_name: Marketplace name
+	rgDescriptions[ key ].name_color: Color of name text in inventory
+	rgDescriptions[ key ].background_color: Background color of item in inventory
+	rgDescriptions[ key ].type: ???
+	rgDescriptions[ key ].tradable: Can the item be traded?
+	rgDescriptions[ key ].marketable: Can the item be sold on steam marketplace?
+	rgDescriptions[ key ].commodiy: ???
+	rgDescriptions[ key ].descriptions: Array of descriptions. Tower unite only uses one field for this.
+		rgDescriptions[ key ][ n ].type: Markup langauge used to parse the text
+		rgDescriptions[ key ][ n ].value: Description
