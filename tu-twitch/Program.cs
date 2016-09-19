@@ -7,7 +7,7 @@ using ChatSharp;
 using ChatSharp.Events;
 using ChatSharp.Handlers;
 
-namespace SpamSpace
+namespace CoolTwitch
 {
     class Program
     {
