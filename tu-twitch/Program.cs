@@ -31,7 +31,7 @@ namespace SpamSpace
         {
             Console.WriteLine("Initializing IRC...");
             const string token = "-twitch oauth2 token-";
-            var client = new IrcClient("irc.chat.twitch.tv", new IrcUser("meharryp1", "meharryp1", "oauth:" + token));
+            var client = new IrcClient("irc.chat.twitch.tv", new IrcUser("-your twitch name-", "-your twitch name-", "oauth:" + token));
 
             client.ConnectionComplete += (s, e) =>
             {
