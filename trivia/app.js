@@ -1,5 +1,5 @@
 // https://discordapp.com/oauth2/authorize?&client_id=177885009393352705&scope=bot&permissions=11280
-// This has bad formatting because of vi being dodgy when I edited it, and I really dont want to edit ~200 lines of stuff that would maybe break
+// This has bad formatting because of vi being dodgy when I edited it, and I really don't want to edit ~200 lines of stuff that would maybe break
 
 
 // Hacky fix count: 3
